@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"  ng-app="starter">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -20,19 +23,25 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+
+    <script src="lib/ionic-ion-swipe-cards/ionic.swipecards.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-controller="mainController">
+
     <ion-pane>
+
       <ion-side-menus>
         <ion-side-menu-content>
           <ion-header-bar class="bar bar-light">
             <button class="button icon ion-navicon" menu-toggle="left"></button>
-              <h1 class="title" style="font-size:40px;">EINSTEIN</h1>
-            </ion-header-bar>
+            <h1 class="title" style="font-size:40px;">EINSTEIN</h1>
+            <button class="button icon ion-edit"></button>
+          </ion-header-bar>
         </ion-side-menu-content>
-        <ion-side-menu  side="left">
-         <ion-item>Home
-         </ion-item>
+        <ion-side-menu>
+
+          <ion-item>Home
+          </ion-item>
           <ion-item>Alunos
           </ion-item>
           <ion-item>Salas
@@ -45,12 +54,45 @@
           </ion-item>
         </ion-side-menu>
       </ion-side-menus>
-<div class="container">
-      <ion-content class="has-header">
-        <p>asda</p>
 
+
+
+      <ion-content has-header="true;">
+
+        <!-- FOTOS ALUNOS PARA SWIPE! DEFINIR UM TAMANHO PADRÃO PARA FOTOS-->
+
+        <div class="fotosAluno">
+        <div class="container-fluid">
+          <div class="row">
+                  <img src="https://s1.vagalume.com/nego-do-borel/images/profile-bigw314.jpg" class="img-responsive">
+              </div>
+          </div>
+        </div>
+
+        <!-- BOTOES CHECK, INFO E DENIED -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col col-33">
+              <button class="button button-denied">
+                <i class="ion-close-circled"></i>
+              </button>
+            </div>
+            <div class="col col-33">
+                <button class="button button-info">
+              <i class="ion-information"></i>
+            </button>
+            </div>
+            <div class="col col-33">
+              <button class="button button-check">
+                <i class="ion-checkmark-circled"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
       </ion-content>
-</div>
         <div class="bar bar-footer bar-light">
           <div class="title">by Pixel</div>
         </div>

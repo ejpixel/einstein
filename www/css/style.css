@@ -1,1 +1,28 @@
+.fotosAluno{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+.button-info{
+  color:#0099FF;
+  font-size:200%;
+  padding:25%;
+  margin-left: auto;
+  padding-left: 40%;
+}
+.button-check{
+  color:green;
+  font-size:500%;
+  padding-right: 7%;
+  margin: auto;
+}
 
+.button-denied{
+  color:red;
+  font-size:500%;
+  padding-left: :7%;
+  margin: auto;
+}

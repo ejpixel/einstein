@@ -23,8 +23,22 @@ angular.module('starter', ['ionic'])
   });
 
 })
-app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate){
-  $scope.toggleLeft= function(){
-    $ionicSideMenuDelegate.toggleLeft()
+angular.module("projetoEinstein"),[]);
+angular.module("projetoEinstein").controller("mainController",function($scope){
+
+  function($scope, $ionicSideMenuDelegate) {
+    $scope.toggleLeft = function() {
+      $ionicSideMenuDelegate.toggleLeft();
+
+    };
   }
-})
+  $scope.goToTelaEdicao = function(){
+    // TODO
+
+  }
+  $scope.goToTelaInfo = function(){
+    // TODO
+
+  }
+
+)}
