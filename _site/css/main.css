@@ -12,8 +12,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #111;
-  background-color: #fdfdfd;
+  color: #443266;
+  background-color: #F1F0FF;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -66,12 +66,12 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #443266;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #221933; }
   a:hover {
-    color: #111;
+    color: #443266;
     text-decoration: underline; }
 
 /**
@@ -151,6 +151,8 @@ pre {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
+  background-color: #443266;
+  color: white;
   position: relative; }
 
 .site-title {
@@ -159,9 +161,10 @@ pre {
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left; }
+  float: left;
+  color: white; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: white; }
 
 .site-nav {
   float: right;
@@ -169,7 +172,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111;
+    color: white;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -178,7 +181,7 @@ pre {
       position: absolute;
       top: 9px;
       right: 15px;
-      background-color: #fdfdfd;
+      background-color: #F1F0FF;
       border: 1px solid #e8e8e8;
       border-radius: 5px;
       text-align: right; }
@@ -213,7 +216,9 @@ pre {
  */
 .site-footer {
   border-top: 1px solid #e8e8e8;
-  padding: 30px 0; }
+  padding: 30px 0;
+  background-color: #443266;
+  color: white; }
 
 .footer-heading {
   font-size: 18px;

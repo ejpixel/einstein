@@ -24,6 +24,6 @@ Ao abrir a tela, serão carregadas as informações de um aluno. Ao marcar falta
 
 Também será possível atribuir falta/presença arrastando a foto para a esquerda/direta (swipe card).
 
-Quando todos os alunos receberem falta/presença, o sistema irá para a tela de [Confirmação de chamada](/confirmacao-chamada "Confirmação de chamada").
+Quando todos os alunos receberem falta/presença, o sistema irá para a tela de [Confirmação de chamada](/einstein/confirmacao-chamada "Confirmação de chamada").
 
-Caso o usuário clique no botão informação, o sistema irá para a tela [Detalhe de chamada](/detalhe-chamada "Detalhe de chamada")
+Caso o usuário clique no botão informação, o sistema irá para a tela [Detalhe de chamada](/einstein/detalhe-chamada "Detalhe de chamada")
