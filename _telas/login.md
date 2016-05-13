@@ -15,5 +15,7 @@ Possuirá os botões:
 
 * login
 
+**Screenshots**
+
 ![]({{ site.baseurl }}/assets/login.png)
 *Tela de login*
