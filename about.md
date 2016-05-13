@@ -33,3 +33,5 @@ Serviços Futuros
 Para a segunda versão do sistema, foram elencadas as seguintes funcionalidades:
 • Confirmação de presença a partir da leitura do cartão individual dos estudantes
 • Autenticação do professor a partir da leitura do cartão do mesmo
+
+![]({{ site.baseurl }}/assets/pixel.png)
