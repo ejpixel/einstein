@@ -172,6 +172,11 @@
 /**
  * Page content
  */
+ img,em {
+	 margin-left: 25%;
+	 margin-right: 25%;
+ }
+
 .page-content {
     padding: $spacing-unit 0;
 }
