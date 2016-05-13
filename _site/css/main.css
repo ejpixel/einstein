@@ -269,6 +269,7 @@ pre {
  * Page content
  */
 img, em {
+  width: 60%;
   margin-left: 25%;
   margin-right: 25%; }
 
