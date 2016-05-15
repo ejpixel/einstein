@@ -1,0 +1,39 @@
+<ion-view>
+    <ion-content class="_chamada">
+
+		<!-- FOTOS ALUNOS PARA SWIPE! DEFINIR UM TAMANHO PADRÃO PARA FOTOS-->
+
+		<div class="fotosAluno">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col col-100">
+						<img src="http://www.rcmsolucoes.com/Images/aluno.png" class="img-responsive">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- BOTOES CHECK, INFO E DENIED -->
+
+		<div class="container">
+			<div class="row">
+				<div class="col col-33">
+					<button class="button button-denied">
+						<i class="ion-close-circled"></i>
+					</button>
+				</div>
+				<div class="col col-33">
+					<button class="button button-info" ng-click="chamadaCtrl.goToDetalhePage()">
+						<i class="ion-information"></i>
+					</button>
+				</div>
+				<div class="col col-33">
+					<button class="button button-check">
+						<i class="ion-checkmark-circled"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+
+    </ion-content>
+</ion-view>

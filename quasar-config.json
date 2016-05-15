@@ -1,0 +1,13 @@
+{
+  "server": {
+    "port": 9090
+  },
+
+  "mountings": {
+    "/": {
+      "mongodb": {
+        "connectionUri": "mongodb://127.0.0.1:3001/meteor"
+      }
+    }
+  }
+}

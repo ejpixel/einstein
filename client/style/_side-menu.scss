@@ -1,0 +1,11 @@
+.item-complex .item-content,
+.item-radio .item-content {
+
+	background-color: $primary-color-2;
+	color: $primary-color-4;
+
+	&:hover {
+		background-color: $primary-color-4;
+		color: $primary-color-2;
+	}
+}

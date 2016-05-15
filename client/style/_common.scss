@@ -1,0 +1,25 @@
+ion-content {
+    background-color: $primary-color-0;
+	max-width: 600px;
+	margin: auto;
+	text-align: center;
+}
+
+.pane {
+	background-color: $primary-color-0;
+}
+
+ion-header-bar {
+    background-color: $primary-color-2 !important;
+}
+
+.bar.bar-stable .title  {
+    background-color: $primary-color-0;
+    color: $color-text !important;
+    margin: 0px;
+    font-size: $huge;
+}
+
+.bar.bar-dark {
+	background-color: $primary-color-2;
+}

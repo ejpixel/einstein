@@ -1,0 +1,24 @@
+input {
+	text-align: center;
+}
+
+.item.item-input-inset {
+	background-color: $primary-color-0;
+	border: none;
+	padding: 0px 2px;
+	display: inline;
+
+	& > label {
+		background-color: $primary-color-2;
+
+		& > input {
+			color: white;
+			width: 100%;
+		}
+	}
+
+	& > button {
+		margin: 0px;
+	}
+
+}

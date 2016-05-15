@@ -1,0 +1,14 @@
+<ion-view title>
+        <ion-content class="_page2">
+		<label class="item item-input">
+			<input ng-model="secondCtrl.messageContent" on-return="logger.login()" type="text" placeholder="Digite uma mensagem">
+		</label>
+        <button class="button button-positive" ng-click="secondCtrl.showMessage(secondCtrl.messageContent)" ng-disabled="!secondCtrl.messageContent">
+            Clique aqui
+        </button>
+         <button class="button button-positive" ng-click="secondCtrl.goToThirdPage()" >
+            Próxima Tela
+        </button>
+
+    </ion-content>
+</ion-view>

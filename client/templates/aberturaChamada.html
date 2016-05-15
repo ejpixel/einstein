@@ -1,0 +1,41 @@
+<ion-view view-title="Abertura de chamada">
+    <ion-content class="_abertura-de-chamada">
+    	<div class="conteudo">
+    		<div ng-show="selecaoDeTurma">
+	    		<div class="row">
+	    			<div class="col col-100">
+	    				<h4>Selecionar turma</h4>
+	    			</div>
+	    		</div>
+	    		<div class="row">
+	    			<div class="col col-100">
+			    		<ion-list>
+			    			<ion-item class="no-border border-radius-3 lista-turma"
+			    			ng-repeat="turma in turmas" ng-click="selecionarTurma(turma)">	    		
+			    					<h4>Código de turma: TID{{turma.id}}</h4>
+			    			</ion-item>
+			    		</ion-list>
+		    		</div>
+	    		</div>
+    		</div>
+    		<div ng-show="!selecaoDeTurma">
+    			<div class="row">
+	    			<div class="col col-100">
+	    				<h4>Selecionar horário</h4>
+	    			</div>
+	    		</div>
+	    		<div class="row">
+	    			<div class="col col-100">
+			    		<ion-list>
+			    			<ion-item class="no-border border-radius-3 lista-horarios"
+			    			ng-repeat="horario in horarios" ng-click="selecionarHorario(horario)">
+			    					<h4>Hora de início: {{horario.inicio}}</h4>
+			    					<h4>Hora de Fim: {{horario.fim}}</h4>
+			    			</ion-item>
+			    		</ion-list>
+	    			</div>
+	    		</div>
+    		</div>
+    	</div>
+    </ion-content>
+</ion-view>

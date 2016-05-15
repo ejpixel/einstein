@@ -1,0 +1,19 @@
+<ion-view>
+    <ion-content class="_login">
+		<h3>Bem vindo!</h3>
+		<div class="item item-input-inset">
+			<label class="item-input-wrapper">
+				<input ng-model="loginCtrl.login" type="text" placeholder="Digite seu login">
+			</label>
+			<label class="item-input-wrapper">
+				<input ng-model="loginCtrl.pass" type="password" placeholder="Digite sua senha">
+			</label>
+			<button class="button" ng-click="loginCtrl.doLogin()" >
+	            Login
+	        </button>
+		</div>
+    </ion-content>
+</ion-view>
+<ion-footer-bar align-title="center" class="pixel-bar bar-dark">
+	<h1 class="title">By Pixel</h1>
+</ion-footer-bar>
