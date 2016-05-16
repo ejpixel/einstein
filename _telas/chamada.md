@@ -27,3 +27,8 @@ Também será possível atribuir falta/presença arrastando a foto para a esquer
 Quando todos os alunos receberem falta/presença, o sistema irá para a tela de [Confirmação de chamada](/einstein/confirmacao-chamada "Confirmação de chamada").
 
 Caso o usuário clique no botão informação, o sistema irá para a tela [Detalhe de chamada](/einstein/detalhe-chamada "Detalhe de chamada")
+
+**Screenshots**
+
+![]({{ site.baseurl }}/assets/chamada.png)
+*Tela de chamada*
