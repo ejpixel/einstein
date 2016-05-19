@@ -14,6 +14,8 @@ Dentre as informações estão:
 * Idade
 * Quantidade total de faltas
 
+Esta tela estará disponível nas versões **web** e **mobile**.
+
 **Compartamento:**
 
 Ao chegar nesta tela, as informações do respectivo aluno irão aparecer.

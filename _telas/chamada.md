@@ -18,6 +18,8 @@ Possuirá os botões:
 * Falta, para marcar que o aluno não está presente
 * Informações, para visualizar informações mais detalhadas do aluno
 
+Esta tela estará disponível nas versões **web** e **mobile**.
+
 **Comportamento:**
 
 Ao abrir a tela, serão carregadas as informações de um aluno. Ao marcar falta/presença, serão carregadas as informações de outro aluno. Esse processo se repetirá até que todos os alunos recebam falta/preseça.

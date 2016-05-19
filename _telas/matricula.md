@@ -16,6 +16,8 @@ Possuirá os botões:
 
 * Upload, para o professor cadastrar uma foto do aluno, opcionalmente
 
+Esta tela estará disponível apenas na versão **web**.
+
 **Observação**
 
 Essa tela estará acessível a partir do __sidemenu__.

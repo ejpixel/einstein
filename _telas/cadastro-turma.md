@@ -13,8 +13,10 @@ Mostrará as informações:
 Possuirá os botões:
 
 * Adicionar novo aluno
-* Fechar turma, se número de matriculados for maior ou igual a 25.
+* Fechar turma, se número de matriculados for maior ou igual a **25**.
 * Remover aluno
+
+Esta tela estará disponível apenas na versão **web**.
 
 **Comportamento**
 
@@ -22,4 +24,4 @@ Possuirá os botões:
 
  Deverá exibir também um botão de remoção em cada item da lista, que ao ser clicado abrirá um modal de confirmação de exclusão.
 
- Ao fechar a turma, ela estará disponível na listagem das turmas.
+ Ao fechar a turma, ela estará disponível na listagem das turmas, e o sistema navegará para a [Tela de Abertura de chamada](/einstein/abertura-chamada "Tela de Abertura de chamada").

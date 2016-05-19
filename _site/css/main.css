@@ -66,12 +66,9 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #443266;
-  text-decoration: none; }
-  a:visited {
-    color: #221933; }
+  color: #443266; }
   a:hover {
-    color: #443266;
+    color: #828282;
     text-decoration: underline; }
 
 /**
