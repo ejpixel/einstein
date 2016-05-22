@@ -9,3 +9,4 @@ layout: tela
 * [Chamada](/einstein/chamada "Chamada")
 * [Cadastro de turma](/einstein/cadastro-turma "Cadastro de turma")
 * [Detalhe de chamada](/einstein/detalhe-chamada "Detalhe de chamada")
+* [Lista de chamada](/einstein/lista-chamada "Lista de chamada")
