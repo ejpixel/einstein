@@ -1,2 +1,4 @@
 node_modules/
-*idea/
+.idea/
+.meteor/
+.sass-cache/4b8b9d3596c91495004a31edfb8efaf9e05e1385/
