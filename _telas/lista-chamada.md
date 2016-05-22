@@ -16,3 +16,8 @@ Para a presença ser marcada, o professor apenas precisará clicar na linha corr
 Caso ocorra um erro e queira remover a presença, será cenessário apenas um novo clique na linha que contém o aluno.
 
 Ao final da chamada, ele terá que confirmar o envio da presença clicando no botão "Confirmar".
+
+**Screenshots**
+
+![]({{ site.baseurl }}/assets/listaPresenca.png)
+*Tela de lista de chamada*
