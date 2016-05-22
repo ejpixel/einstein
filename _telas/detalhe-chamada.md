@@ -14,7 +14,14 @@ Dentre as informações estão:
 * Idade
 * Quantidade total de faltas
 
+Esta tela estará disponível nas versões **web** e **mobile**.
+
 **Compartamento:**
 
-Ao chegar nesta tela, as informações do respectivo aluno irão aparecer. 
+Ao chegar nesta tela, as informações do respectivo aluno irão aparecer.
 Caso o professor veja a necessidade de saber mais sobre onde as faltas do aluno ocorreram, ele terá a opção de clicar em Faltas, o qual irá expandir uma lista que conterá onde elas ocorreram.
+
+**Screenshots**
+
+![]({{ site.baseurl }}/assets/detalhe-chamada.png)
+*Tela de detalhe da chamada*

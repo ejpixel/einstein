@@ -66,12 +66,9 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #443266;
-  text-decoration: none; }
-  a:visited {
-    color: #221933; }
+  color: #443266; }
   a:hover {
-    color: #443266;
+    color: #828282;
     text-decoration: underline; }
 
 /**
@@ -268,6 +265,11 @@ pre {
 /**
  * Page content
  */
+img, em {
+  width: 60%;
+  margin-left: 25%;
+  margin-right: 25%; }
+
 .page-content {
   padding: 30px 0; }
 
