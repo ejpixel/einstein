@@ -17,3 +17,8 @@ Deverá mostrar a lista de turmas. Ao clicar em um item da lista, ele deverá se
 **Observação**
 
 Essa tela estará acessível a partir do __sidemenu__.
+
+**Screenshots**
+
+![]({{ site.baseurl }}/assets/acompanhamento.png)
+*Tela de acompanhamento*
