@@ -1,0 +1,24 @@
+<ion-view view-title="Acompanhamento de frequência">
+    <ion-content class="_acompanhamento">
+
+		<div ng-repeat="turma in turmas">
+
+			<ion-item ng-class="{active: isGroupShown(turma)}" >
+				<div ng-click="toggleGroup(turma)">
+					<label>Turma {{turma.turma.disciplina}}</label>
+				</div>
+				<ion-item class="item-accordion" ng-show="isGroupShown(turma)">
+					<ion-item ng-repeat="falta in turma.faltas">
+						<div class="nome">
+							{{falta.aluno}}
+						</div>
+						<div class="presenca">
+							{{falta.presenca}}
+						</div>
+					</ion-item>
+				</ion-item>
+			</ion-item>
+		</div>
+
+    </ion-content>
+</ion-view>
