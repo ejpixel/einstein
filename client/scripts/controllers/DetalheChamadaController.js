@@ -11,6 +11,13 @@ function DetalheChamadaController($location, $scope, $ionicScrollDelegate, $stat
 	let databaseName = 'meteor';
 	let url = "http://localhost:9090/query/fs/"+databaseName+"/?q="+query;
 
+	$scope.aluno = {
+		nome: aluno.nome,
+		idade: aluno.idade,
+		matricula: aluno.matricula,
+		foto: aluno.foto
+	};
+
 	Tracker.autorun(function() {
 		var infoAluno;
 		HTTP.get(url, {timeout:30000}, function(error, response) {
@@ -20,14 +27,6 @@ function DetalheChamadaController($location, $scope, $ionicScrollDelegate, $stat
 				let infoAluno = _.map(results, function(r) {
 					return JSON.parse(r);
 				});
-
-				$scope.aluno = {
-			        nome: aluno.nome,
-			        idade: aluno.idade,
-			        matricula: aluno.matricula,
-			        foto: aluno.foto
-			    };
-
 				$scope.faltas = infoAluno;
 				console.log($scope.faltas);
 				if (!$scope.$$phase){$scope.$apply();}

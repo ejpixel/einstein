@@ -20,7 +20,7 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 					controller: 'FirstPageController as firstCtrl'
 				}
 			}
-    		})
+    	})
 		.state('app.second-page', {
 			url: '/second-page',
 			views: {
@@ -66,7 +66,6 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 				}
 			}
 		})
-
 		.state('app.lista-chamada' , {
 			url: '/lista-chamada',
 			views: {
@@ -74,16 +73,23 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
                     templateUrl: 'client/templates/lista-chamada.html',
                     controller: 'ListaChamadaController as listaChamadaCtrl'
                 }
-                }
-                })
-
+            }
+        })
 		.state('app.matricula' , {
 			url: '/matricula',
 			views: {
 				'appContent': {
 					templateUrl: 'client/templates/matricula.html',
 					controller: 'MatriculaController as matriculaCtrl'
-
+				}
+			}
+		})
+		.state('app.acompanhamento' , {
+			url: '/acompanhamento',
+			views: {
+				'appContent': {
+					templateUrl: 'client/templates/acompanhamento.html',
+					controller: 'AcompanhamentoController as acomCtrl'
 				}
 			}
 		})
