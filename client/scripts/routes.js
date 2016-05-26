@@ -57,6 +57,15 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 				}
 			}
 		})
+		.state('app.cadastro-turma' , {
+			url: '/cadastro-turma',
+			views: {
+				'appContent': {
+					templateUrl: 'client/templates/cadastro-turma.html',
+					controller: 'CadastroTurmaController as cadastroTurmaCtrl'
+				}
+			}
+		})
 		;
 		$locationProvider.html5Mode({
 			enabled: true,

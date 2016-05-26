@@ -15,4 +15,8 @@ function FirstPageController($location, $scope) {
     vm.goToDetalhePage = function() {
         $location.path('/einstein/detalhe-chamada');
     }
+    vm.goToCadastroTurma = function() {
+        $location.path('/einstein/cadastro-turma');
+    }
+
 }
