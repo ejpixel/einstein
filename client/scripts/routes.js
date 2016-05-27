@@ -20,7 +20,7 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 					controller: 'FirstPageController as firstCtrl'
 				}
 			}
-    	})
+    		})
 		.state('app.second-page', {
 			url: '/second-page',
 			views: {
@@ -63,6 +63,15 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 				'appContent': {
 					templateUrl: 'client/templates/aberturaChamada.html',
 					controller: 'AberturaChamadaController as aberturaChamadaCtrl'
+				}
+			}
+		})
+		.state('app.cadastro-turma' , {
+			url: '/cadastro-turma',
+			views: {
+				'appContent': {
+					templateUrl: 'client/templates/cadastro-turma.html',
+					controller: 'CadastroTurmaController as cadastroTurmaCtrl'
 				}
 			}
 		})
