@@ -1,0 +1,24 @@
+{
+ "servers": [
+    {
+      "host": "52.40.26.114",
+      "username": "ubuntu",
+      "pem": "/home/decio/Documents/amazon/lightchat.pem",
+      "env": {}
+    }
+  ],
+  "setupMongo": true,
+  "setupNode": true,
+  "nodeVersion": "5.10.1",
+  "setupPhantom": true,
+  "enableUploadProgressBar": true,
+  "appName": "einstein",
+  "app": "/home/decio/Documents/einstein",
+
+  "env": {
+    "PORT": 80,
+    "ROOT_URL": "http://einstein-floripa.zapto.org"
+  },
+
+  "deployCheckWaitTime": 150
+}
