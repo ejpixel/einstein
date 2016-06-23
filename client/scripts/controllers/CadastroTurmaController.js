@@ -1,20 +1,12 @@
 angular.module("Estrutura-Inicial")
     .controller('CadastroTurmaController', CadastroTurmaController);
 
-function CadastroTurmaController($location, $scope, $ionicScrollDelegate, $ionicPopup) {
+function CadastroTurmaController($location, $scope, $ionicScrollDelegate, $ionicPopup, $stateParams) {
     var vm = this;
-
-     $scope.matriculados = [
-         {nome: "Júlia", matricula: 55555},
-         {nome: "Décio", matricula: 66666},
-         {nome: "Thomas", matricula: 11111},
-         {nome: "Nicolas", matricula: 99999},
-         {nome: "Clayton", matricula: 12345},
-         {nome: "Fabio", matricula: 54321},
-     ];
+     $scope.matriculados = Alunos.find({},{fields: {nome:1,matricula:1}}).fetch();
 
      vm.adicionarAluno = function (aluno) {
-        $scope.matriculados.push(angular.copy(aluno));
+        $scope.matriculados.push(Alunos.find().fetch());
 		$ionicScrollDelegate.scrollBottom();
      };
 
