@@ -47,10 +47,19 @@ function AberturaChamadaController($location, $scope) {
         $scope.horarioSelecionado = horarioH;
         console.log("Horário selecionado:"+ "Inicio ("+ $scope.horarioSelecionado.inicio+")"+ "Fim ("+$scope.horarioSelecionado.fim+")");
         $scope.selecaoDeTurma = true;
-        $scope.redirecionar("/einstein/chamada/:123456", true);
+        $scope.redirecionar();
     };
 
-    $scope.redirecionar = function(url) {
-        $location.path(url);
+    $scope.redirecionar = function() {
+        //$location.path(url).search({horario:$scope.horarioSelecionado,turma: $scope.turmaSelecionada.id});
+        let turma = Turmas.findOne({turmaId: 147261});
+        let alunosId = turma['alunos'];
+        var matricula = parseInt(alunosId[0]);
+        let aluno = Alunos.findOne({matricula: matricula});
+        let chamadaAntiga = Chamadas.find({}, {chamadaId: 1}).fetch();
+        let chamadaAtual = chamadaAntiga[chamadaAntiga.length-1]['chamadaId'] +1;
+        Chamadas.insert({chamadaId: chamadaAtual, turmaId: 147261, data: new Date()});
+        var redirecionamento = "/einstein/chamada/:147261/:" + chamadaAtual + "/:" + aluno['matricula'];
+        $location.path(redirecionamento);
     };
 };

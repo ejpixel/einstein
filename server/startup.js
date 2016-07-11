@@ -45,16 +45,44 @@ Meteor.startup(function () {
 		var turma = {
 			turmaId: 147258,
 			professorId: '123123123',
+            alunos: {
+                alunoUm: '6wGZtB6bFgeHLujM9',
+                alunoDois: 'dvjR8z94wNGrzJECb',
+                alunoTres: 'h4Hsj45rAgE65QbwA'
+            },
 			disciplina: 'matemática'
 		};
 		Turmas.insert(turma);
 		var turma2 = {
 			turmaId: 147259,
 			professorId: '123123123',
+			alunos: {
+				alunoUm: '6wGZtB6bFgeHLujM9',
+				alunoDois: 'dvjR8z94wNGrzJECb',
+				alunoTres: 'h4Hsj45rAgE65QbwA'
+			},
 			disciplina: 'biologia'
 		};
 		Turmas.insert(turma2);
+        var turma3 = {
+            turmaId: 147260,
+            professorId: '123123123',
+            alunos: {
+                alunoUm: '6wGZtB6bFgeHLujM9',
+                alunoDois: 'dvjR8z94wNGrzJECb',
+                alunoTres: 'h4Hsj45rAgE65QbwA'
+            },
+            disciplina: 'fisica'
+        };
+        Turmas.insert(turma3);
 	}
+	var turma4 = {
+		turmaId: 147261,
+		professorId: '123123123',
+		alunos: ["123456", "123123", "456789"],
+		disciplina: 'ingles'
+	};
+	Turmas.insert(turma4);
 	//insere matricula dummy
 	if(!Matriculas.find().count()) {
 		var matricula1 = {

@@ -40,7 +40,16 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 			}
 		})
 		.state('app.chamada' , {
-			url: '/chamada/:alunoId',
+			url: '/chamada/:turmaId',
+			views: {
+				'appContent': {
+					templateUrl: 'client/templates/chamada.html',
+					controller: 'ChamadaController as chamadaCtrl'
+				}
+			}
+		})
+		.state('app.chamadaDois' , {
+			url: '/chamada/:turmaId/:chamadaId/:alunoId',
 			views: {
 				'appContent': {
 					templateUrl: 'client/templates/chamada.html',
