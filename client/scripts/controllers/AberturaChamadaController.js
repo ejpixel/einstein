@@ -2,55 +2,36 @@ angular.module("Estrutura-Inicial")
     .controller('AberturaChamadaController', AberturaChamadaController);
 
 function AberturaChamadaController($location, $scope) {
-    $scope.turmas = [];
-    $scope.horarios = [];
+
+    $scope.turmas = Turmas.find().fetch();
+
+    $scope.horarios = [
+		{inicio: "08:20", fim: "10:00"},
+		{inicio: "10:10", fim: "12:00"},
+		{inicio: "13:30", fim: "15:00"},
+		{inicio: "15:10", fim: "17:00"},
+		{inicio: "18:30", fim: "20:00"},
+		{inicio: "20:20", fim: "22:00"},
+	];
+
     $scope.turmaSelecionada=null;
     $scope.horarioSelecionado=null;
     $scope.selecaoDeTurma = true;
-    turmas_mock();
-    horarios_mock();
 
-    function turmas_mock(){
-        console.log("@@Inicio do mock de turmas!");
-        for(var i=0; i<3; i++){
-            var turma = {};
-            turma.id = i;
-            $scope.turmas.push(turma);
-        }
-    };
-
-    function horarios_mock(){
-        console.log("@@Inicio do mock de horarios!");
-        for (var i = 0; i < 3; i++) {
-            var horario = {};
-            if(i==1){
-                horario.inicio = "08:30";
-                horario.fim = "12:00";
-            } else if(i==2) {
-                horario.inicio = "13:30";
-                horario.fim = "18:00";
-            } else{
-                horario.inicio = "18:30";
-                horario.fim = "22:00";
-            }
-            $scope.horarios.push(horario);
-        }
-    };
+	function redirecionar(url) {
+		$location.path(url);
+	};
 
     $scope.selecionarTurma = function(turmaT){
         $scope.turmaSelecionada = turmaT;
-        console.log("Turma selecionada:"+ $scope.turmaSelecionada.id);
         $scope.selecaoDeTurma = false;
     }
 
     $scope.selecionarHorario = function (horarioH) {
         $scope.horarioSelecionado = horarioH;
-        console.log("Horário selecionado:"+ "Inicio ("+ $scope.horarioSelecionado.inicio+")"+ "Fim ("+$scope.horarioSelecionado.fim+")");
         $scope.selecaoDeTurma = true;
-        $scope.redirecionar("/einstein/chamada/:123456", true);
+		redirecionar("/einstein/chamada/:123456", true);
+        // redirecionar("/einstein/chamada/:"+$scope.turmaSelecionada.turmaId, true);
     };
 
-    $scope.redirecionar = function(url) {
-        $location.path(url);
-    };
 };
