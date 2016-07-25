@@ -4,52 +4,47 @@ angular.module("Estrutura-Inicial")
 function ChamadaController($location, $scope, $stateParams) {
     var vm = this;
 
-	let alunoId = parseInt($stateParams.alunoId.slice(1));
-	let aluno = Alunos.findOne({matricula: alunoId});
+	let turmaId = parseInt($stateParams.turmaId.slice(1));
+	let aluno = Alunos.findOne({matricula: parseInt($stateParams.alunoId.slice(1))});
+	let chamada = parseInt($stateParams.chamadaId.slice(1));
+	let chamadaId = Chamadas.findOne({chamadaId: chamada},{_id: 1});
 
-	$scope.aluno = {
-		nome: aluno.nome,
-		matricula: aluno.matricula,
-		foto: aluno.foto
-	};
+    $scope.aluno = {
+        nome: aluno.nome,
+        matricula: aluno.matricula,
+        foto: aluno.foto
+    };
 
-	vm.markFalta = function() {
-		if(alunoId == 123456){
-			alunoId = 123123;
-			$location.path('/einstein/chamada/:'.concat(alunoId));
-		}else if(alunoId == 123123){
-			alunoId = 456789;
-			$location.path('/einstein/chamada/:'.concat(alunoId));
-		}else {
-			$location.path('/einstein/lista-chamada');
-		}
+	var array = Turmas.findOne({turmaId: turmaId}, {_id: 0, alunos: 1});
+	alunos = array['alunos'];
+	var idAluno = aluno.matricula;
+	var index = alunos.indexOf(idAluno.toString());
+
+	vm.marcarFalta = function () {
+		Chamadas.update({_id: chamadaId._id}, {$push: { "alunos":{alunoId: idAluno, presente: 'nao'}}});
+        if (index+1 == alunos.length) {
+            $location.path('/einstein/lista-chamada');
+        } else {
+            $location.path('/einstein/chamada/:' + turmaId + '/:' + chamada + '/:' + alunos[index + 1]);
+        }
 	}
 
-	vm.markPresenca = function() {
-		if(alunoId == 123456){
-			alunoId = 123123;
-			$location.path('/einstein/chamada/:'.concat(alunoId));
-		}else if(alunoId == 123123){
-			alunoId = 456789;
-			$location.path('/einstein/chamada/:'.concat(alunoId));
-		}else {
-			$location.path('/einstein/lista-chamada');
-		}
-	}
+    vm.marcarPresenca = function () {
+		Chamadas.update({_id: chamadaId._id}, {$push: { "alunos":{alunoId: idAluno, presente: 'sim'}}});
+        if (index+1 == alunos.length) {
+            $location.path('/einstein/lista-chamada');
+        } else {
+            $location.path('/einstein/chamada/:' + turmaId + '/:' + chamada + '/:' + alunos[index + 1]);
+        }
+    }
 
 	vm.goToDetalhePage = function() {
-		$location.path('/einstein/detalhe-chamada/:'.concat(123456));
+		$location.path('/einstein/detalhe-chamada/:'.concat(aluno.matricula));
 	}
 
-	vm.back = function(){
-	if(alunoId == 123456){
-	  alunoId = 123456;
-	}else if(alunoId == 123123){
-	  alunoId = 123456;
-	}else if(alunoId==456789){
-	  alunoId = 123123;
-	}
-	$location.path('/einstein/chamada/:'.concat(alunoId));
+	vm.voltar = function () {
+		Chamadas.update({_id: chamadaId._id}, {$pop: { "alunos": 1}});
+		$location.path('/einstein/chamada/:' + turmaId + '/:' + chamada + '/:' + alunos[index - 1]);
 	}
 
 	vm.goToListaPage = function() {
