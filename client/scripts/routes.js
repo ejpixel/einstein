@@ -12,33 +12,6 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 			abstract: true,
 			templateUrl: 'client/templates/menu.html'
 		})
-		.state('app.first-page', {
-			url: '/first-page',
-			views: {
-				'appContent' : {
-					templateUrl: 'client/templates/first-page.html',
-					controller: 'FirstPageController as firstCtrl'
-				}
-			}
-    		})
-		.state('app.second-page', {
-			url: '/second-page',
-			views: {
-				'appContent': {
-					templateUrl: 'client/templates/second-page.html',
-					controller: 'SecondPageController as secondCtrl'
-				}
-			}
-		})
-		.state('app.third-page', {
-			url: '/third-page',
-			views: {
-				'appContent': {
-					templateUrl: 'client/templates/third-page.html',
-					controller: 'ThirdPageController as thirdCtrl'
-				}
-			}
-		})
 		.state('app.chamada' , {
 			url: '/chamada/:turmaId',
 			views: {

@@ -9,11 +9,11 @@ function ChamadaController($location, $scope, $stateParams) {
 	let chamada = parseInt($stateParams.chamadaId.slice(1));
 	let chamadaId = Chamadas.findOne({chamadaId: chamada},{_id: 1});
 
-    $scope.aluno = {
-        nome: aluno.nome,
-        matricula: aluno.matricula,
-        foto: aluno.foto
-    };
+  $scope.aluno = {
+    nome: aluno.nome,
+    matricula: aluno.matricula,
+    foto: aluno.foto
+  };
 
 	var array = Turmas.findOne({turmaId: turmaId}, {_id: 0, alunos: 1});
 	alunos = array['alunos'];
@@ -29,14 +29,14 @@ function ChamadaController($location, $scope, $stateParams) {
         }
 	}
 
-    vm.marcarPresenca = function () {
-		Chamadas.update({_id: chamadaId._id}, {$push: { "alunos":{alunoId: idAluno, presente: 'sim'}}});
-        if (index+1 == alunos.length) {
-            $location.path('/einstein/lista-chamada');
-        } else {
-            $location.path('/einstein/chamada/:' + turmaId + '/:' + chamada + '/:' + alunos[index + 1]);
-        }
+  vm.marcarPresenca = function () {
+    Chamadas.update({_id: chamadaId._id}, {$push: { "alunos":{alunoId: idAluno, presente: 'sim'}}});
+    if (index+1 == alunos.length) {
+      $location.path('/einstein/lista-chamada');
+    } else {
+      $location.path('/einstein/chamada/:' + turmaId + '/:' + chamada + '/:' + alunos[index + 1]);
     }
+  }
 
 	vm.goToDetalhePage = function() {
 		$location.path('/einstein/detalhe-chamada/:'.concat(aluno.matricula));
