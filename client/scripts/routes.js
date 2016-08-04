@@ -14,6 +14,11 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 		})
 		.state('app.chamada' , {
 			url: '/chamada/:turmaId',
+			cache: false,
+			params: {
+				chamdaId: '',
+				horarioSelecionado: {}
+			},
 			views: {
 				'appContent': {
 					templateUrl: 'client/templates/chamada.html',
@@ -59,13 +64,16 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 		})
 		.state('app.lista-chamada' , {
 			url: '/lista-chamada',
+			params: {
+				chamadaId: ''
+			},
 			views: {
 				'appContent': {
-                    templateUrl: 'client/templates/lista-chamada.html',
-                    controller: 'ListaChamadaController as listaChamadaCtrl'
-                }
-            }
-        })
+              templateUrl: 'client/templates/lista-chamada.html',
+              controller: 'ListaChamadaController as listaChamadaCtrl'
+          }
+        }
+    })
 		.state('app.matricula' , {
 			url: '/matricula',
 			views: {

@@ -3,13 +3,24 @@ angular.module("Estrutura-Inicial")
 
 function ListaChamadaController($location, $scope, $stateParams) {
     var vm = this;
-    //let alunoId = parseInt($stateParams.alunoId.slice(1));
-    let aluno = Alunos.findOne({matricula: 123456});
-    console.log(aluno.nome);
 
-    $scope.devList = [
-        { text: aluno.nome, checked: false },
-        { text: aluno.nome, checked: false },
-        { text: aluno.nome, checked: false }
-    ];
+    let chamadaId = $stateParams.chamadaId;
+    let alunos = Chamadas.findOne({_id: chamadaId}).alunos;
+
+    $scope.alunosList = _.map(alunos, function(a) {
+        let aluno = Alunos.findOne({_id: a.alunoId});
+        return {
+            text: aluno.nome,
+            checked: a.presente === "sim" ? true : false
+        };
+    });
+
+    vm.confirmar = function() {
+        $location.path('/einstein/aberturaChamada');
+    };
+
+    vm.cancelar = function() {
+        Chamadas.remove({_id: chamadaId});
+        $location.path('/einstein/aberturaChamada');
+    };
 }

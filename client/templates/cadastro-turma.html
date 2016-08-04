@@ -1,19 +1,19 @@
 <ion-view>
     <ion-content class="_cadastroturma">
-                <h3>Cadastro Turma</h3>
-                <h4>Alunos Matriculados</h4>
-                <ion-list>
-                        <ion-item ng-repeat="aluno in matriculados" class="item row">
-                            <h2 class="col-40">{{aluno.nome}}</h2>
-                            <h2 class="col-40">{{aluno.matricula}}</h2>
-                            <ion-checkbox class="col-5" ng-model="aluno.selecionado"></ion-checkbox>
-                        </ion-item>
-                </ion-list>
-                <hr/>
-                <div class="item item-input-inset">
-                            <button class="button" ng-click="cadastroTurmaCtrl.cadastrarTurma()" ng-disabled="!cadastroTurmaCtrl.isAlunosSuficientes(matriculados)">
-                                        Cadastrar turma
-                            </button>
-                </div>
+        <h3>Cadastro Turma</h3>
+        <h4>Alunos Matriculados</h4>
+        <ion-list>
+            <ion-item ng-repeat="aluno in alunos" class="item row">
+                <h2 class="col-40">{{aluno.nome}}</h2>
+                <h2 class="col-40">{{aluno.matricula}}</h2>
+                <ion-checkbox class="col-5" ng-model="aluno.selecionado"></ion-checkbox>
+            </ion-item>
+        </ion-list>
+        <hr/>
+        <div class="item item-input-inset">
+            <button class="button" ng-click="cadastroTurmaCtrl.cadastrarTurma()" ng-disabled="!cadastroTurmaCtrl.isAlunosSuficientes(alunos)">
+                Cadastrar turma
+            </button>
+        </div>
     </ion-content>
 </ion-view>

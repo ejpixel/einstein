@@ -1,42 +1,44 @@
 angular.module("Estrutura-Inicial")
     .controller('ChamadaController', ChamadaController);
 
-function ChamadaController($location, $scope, $stateParams) {
+function ChamadaController($location, $scope, $stateParams, $state) {
     var vm = this;
 
-	let turmaId = parseInt($stateParams.turmaId.slice(1));
-	let aluno = Alunos.findOne({matricula: parseInt($stateParams.alunoId.slice(1))});
-	let chamada = parseInt($stateParams.chamadaId.slice(1));
-	let chamadaId = Chamadas.findOne({chamadaId: chamada},{_id: 1});
+  	let turmaId = $stateParams.turmaId;
 
-  $scope.aluno = {
-    nome: aluno.nome,
-    matricula: aluno.matricula,
-    foto: aluno.foto
-  };
+    let chamadaId = Chamadas.insert({
+      turmaId: turmaId,
+      data: new Date(),
+      alunos: []
+    });
 
-	var array = Turmas.findOne({turmaId: turmaId}, {_id: 0, alunos: 1});
-	alunos = array['alunos'];
-	var idAluno = aluno.matricula;
-	var index = alunos.indexOf(idAluno.toString());
+	$scope.alunos = Turmas.findOne({_id: turmaId}).alunos;
+
+    var updateAluno = function(i) {
+        idAluno = $scope.alunos[i]._id;
+        $scope.aluno = Alunos.findOne({_id: idAluno});
+    };
+
+    var index = 0;
+    var idAluno = 0;
+	updateAluno(index);
+
+    var marcar = function(presenca) {
+        Chamadas.update({_id: chamadaId}, {$push: { "alunos":{alunoId: idAluno, presente: presenca}}});
+        if (index+1 == $scope.alunos.length) {
+            $state.go('app.lista-chamada', {chamadaId: chamadaId});
+        } else {
+            updateAluno(++index);
+        }
+    }
 
 	vm.marcarFalta = function () {
-		Chamadas.update({_id: chamadaId._id}, {$push: { "alunos":{alunoId: idAluno, presente: 'nao'}}});
-        if (index+1 == alunos.length) {
-            $location.path('/einstein/lista-chamada');
-        } else {
-            $location.path('/einstein/chamada/:' + turmaId + '/:' + chamada + '/:' + alunos[index + 1]);
-        }
+		marcar('nao');
 	}
 
-  vm.marcarPresenca = function () {
-    Chamadas.update({_id: chamadaId._id}, {$push: { "alunos":{alunoId: idAluno, presente: 'sim'}}});
-    if (index+1 == alunos.length) {
-      $location.path('/einstein/lista-chamada');
-    } else {
-      $location.path('/einstein/chamada/:' + turmaId + '/:' + chamada + '/:' + alunos[index + 1]);
+    vm.marcarPresenca = function () {
+        marcar('sim');
     }
-  }
 
 	vm.goToDetalhePage = function() {
 		$location.path('/einstein/detalhe-chamada/:'.concat(aluno.matricula));

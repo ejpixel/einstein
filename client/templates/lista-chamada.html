@@ -3,19 +3,16 @@
         <div class="conteudo">
             <h4>Turma: XXX</h4>
             <div class="list">
-                <ion-checkbox ng-repeat="item in devList"
-                              ng-model="item.checked"
-                              ng-checked="item.checked"
-                              class="item-checkbox-right">
+                <ion-checkbox ng-repeat="item in alunosList" ng-model="item.checked" ng-checked="item.checked" class="item-checkbox-right">
                     {{ item.text }}
                 </ion-checkbox>
-
             </div>
-            <div class="button-bar">
-                <a class="button button-outline">Cancelar</a>
-                <a class="button button-outline">Confirmar</a>
-            </div>
-
+            <button class="button" ng-click="listaChamadaCtrl.confirmar()">
+                Confirmar
+            </button>
+            <button class="button" ng-click="listaChamadaCtrl.cancelar()">
+                Cancelar
+            </button>
         </div>
     </ion-content>
 </ion-view>

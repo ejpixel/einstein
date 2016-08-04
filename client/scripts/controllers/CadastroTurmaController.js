@@ -3,33 +3,35 @@ angular.module("Estrutura-Inicial")
 
 function CadastroTurmaController($location, $scope, $ionicScrollDelegate, $ionicPopup, $stateParams) {
     var vm = this;
-     $scope.matriculados = Alunos.find({},{fields: {nome:1,matricula:1}}).fetch();
+     $scope.alunos = Alunos.find({},{fields: {nome:1,matricula:1}}).fetch();
 
      vm.adicionarAluno = function (aluno) {
-        $scope.matriculados.push(Alunos.find().fetch());
+        $scope.alunos.push(aluno);
 		$ionicScrollDelegate.scrollBottom();
      };
 
-     vm.removerAluno = function(aluno)  {
-        $scope.matriculados = $scope.matriculados.filter(function(aluno) {
-            if(!aluno.selecionado) return aluno;
-        });
-     };
-
-     vm.isAlunoSelecionado =  function (matriculados) {
-        return matriculados.some(function (aluno) {
+     vm.isAlunoSelecionado =  function (alunos) {
+        return alunos.some(function (aluno) {
             return aluno.selecionado;
         });
      };
 
-     vm.isAlunosSuficientes = function(matriculados) {
-		return matriculados.length>=25;
+     vm.isAlunosSuficientes = function(alunos) {
+		// return alunos.length>=25;
+        return true;
      };
 
      vm.cadastrarTurma = function() {
-		$ionicPopup.alert({
-			title: 'Turma cadastrada com sucesso!'
-		});
+        var matriculados = [];
+        angular.forEach($scope.alunos, function(a) {
+            matriculados.push({
+                _id: a._id
+            });
+        })
+        Turmas.insert({
+			professorId: '123123123',
+            alunos: matriculados
+        });
 		$location.path('/einstein/abertura-chamada');
      };
 
