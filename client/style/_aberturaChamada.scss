@@ -1,25 +1,29 @@
-
 ._abertura-de-chamada {
-	
-	.conteudo { 
+
+	.conteudo {
 		margin-top: 5% !important;
 	}
 
 	.lista-turma {
 		width: 100%; height: 10vh;
-		background: rgba(255,255,255, .35)!important; 
+		background: rgba(255,255,255, .35)!important;
 		border-left: none;
-		border-right: none; 
+		border-right: none;
 		border-top: none;
+
+		& > h4:first-child {
+			font-size: 1.3em;
+			font-weight: bold;
+		}
 	}
 
 	.lista-horarios {
-		width: 100%; 
+		width: 100%;
 		height: 10vh;
-		background: rgba(255,255,255, .35)!important; 
+		background: rgba(255,255,255, .35)!important;
 		border-left: none;
-		border-right: none; 
+		border-right: none;
 		border-top: none;
 	}
-	
+
 }

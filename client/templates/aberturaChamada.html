@@ -11,8 +11,9 @@
 	    			<div class="col col-100">
 			    		<ion-list>
 			    			<ion-item class="no-border border-radius-3 lista-turma"
-			    			ng-repeat="turma in turmas" ng-click="selecionarTurma(turma)">	    		
-			    					<h4>Código de turma: TID{{turma.id}}</h4>
+			    			ng-repeat="turma in turmas" ng-click="selecionarTurma(turma)">
+									<h4>{{turma.disciplina}}</h4>
+			    					<h4>Código da turma: {{turma.turmaId}}</h4>
 			    			</ion-item>
 			    		</ion-list>
 		    		</div>
