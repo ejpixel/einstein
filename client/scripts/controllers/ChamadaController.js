@@ -6,10 +6,15 @@ function ChamadaController($location, $scope, $stateParams, $state) {
 
   	let turmaId = $stateParams.turmaId;
 
+    $scope.isMobile = Meteor.isCordova;
+
+    $('#my-datepicker').datepicker();
+
     let chamadaId = Chamadas.insert({
-      turmaId: turmaId,
-      data: new Date(),
-      alunos: []
+        turmaId: turmaId,
+        data: new Date(),
+        disciplina: Meteor.user().profile.disciplina,
+        alunos: []
     });
 
 	$scope.alunos = Turmas.findOne({_id: turmaId}).alunos;
@@ -26,7 +31,7 @@ function ChamadaController($location, $scope, $stateParams, $state) {
     var marcar = function(presenca) {
         Chamadas.update({_id: chamadaId}, {$push: { "alunos":{alunoId: idAluno, presente: presenca}}});
         if (index+1 == $scope.alunos.length) {
-            $state.go('app.lista-chamada', {chamadaId: chamadaId});
+            $state.go('app.lista-chamada', {chamadaId: chamadaId, turmaId: turmaId});
         } else {
             updateAluno(++index);
         }
@@ -50,7 +55,11 @@ function ChamadaController($location, $scope, $stateParams, $state) {
 	}
 
 	vm.goToListaPage = function() {
-		$location.path('/einstein/lista-chamada');
+		$state.go('app.lista-chamada', {chamadaId: chamadaId, turmaId: turmaId});
 	}
+
+    vm.escolherData = function() {
+
+    }
 
 }

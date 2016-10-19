@@ -4,9 +4,11 @@ angular.module("Estrutura-Inicial")
 function LoginController($location, $scope, $ionicPopup) {
     var vm = this;
 
+    Meteor.logout();
+
     vm.doLogin = function() {
 
-		if(!vm.login || !vm.pass){
+		if(!vm.login || !vm.pass) {
 			Meteor.logout();
 			fail($ionicPopup);
 			return;

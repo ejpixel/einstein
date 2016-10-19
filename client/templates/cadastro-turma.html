@@ -1,6 +1,10 @@
 <ion-view>
     <ion-content class="_cadastroturma">
         <h3>Cadastro Turma</h3>
+
+        <h4>Nome:</h4>
+        <input type="text" placeholder="Nome da turma" ng-model="cadastroTurmaCtrl.nome" />
+
         <h4>Alunos Matriculados</h4>
         <ion-list>
             <ion-item ng-repeat="aluno in alunos" class="item row">
@@ -10,10 +14,16 @@
             </ion-item>
         </ion-list>
         <hr/>
+
         <div class="item item-input-inset">
             <button class="button" ng-click="cadastroTurmaCtrl.cadastrarTurma()" ng-disabled="!cadastroTurmaCtrl.isAlunosSuficientes(alunos)">
                 Cadastrar turma
             </button>
+
+            <button type="file" class="button" ng-click="cadastroTurmaCtrl.importarAlunos()">
+                Importar alunos
+            </button>
+
         </div>
     </ion-content>
 </ion-view>

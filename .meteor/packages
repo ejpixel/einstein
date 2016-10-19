@@ -23,3 +23,6 @@ accounts-base
 accounts-password
 http
 alethes:lodash
+tomi:upload-server
+tomi:upload-jquery
+rajit:bootstrap3-datepicker

@@ -1,10 +1,14 @@
 <ion-view>
     <ion-nav-buttons side="right">
+        <button class="button" ng-if="!isMobile" ng-click="chamadaCtrl.escolherData()">
+            Chamada com data retroativa
+        </button>
         <button class="button" ng-click="chamadaCtrl.goToListaPage()">
             Lista
         </button>
     </ion-nav-buttons>
     <ion-content class="_chamada">
+
 
       <div class="fotos-aluno">
   			<img src="{{aluno.foto}}" class="img-responsive">
@@ -14,9 +18,9 @@
         <ion-item><h2>{{aluno.matricula}}</h2></ion-item>
       </ion-list>
 
-      <button class="button-back" ng-click="chamadaCtrl.voltar()">
+      <!-- <button class="button-back" ng-click="chamadaCtrl.voltar()">
   			<i class="ion-refresh"></i>
-  		</button>
+  		</button> -->
 
   		<button class="button-denied" ng-click="chamadaCtrl.marcarFalta()">
   			<i class="ion-close-round"></i>
@@ -25,10 +29,11 @@
   		<button class="button-check" ng-click="chamadaCtrl.marcarPresenca()">
   			<i class="ion-checkmark-round"></i>
   		</button>
+        <!-- <input type="text" class="form-control" id="my-datepicker" ng-model="chamadaCtrl.date"> -->
 
-      <button class="button-info" ng-click="chamadaCtrl.goToDetalhePage()">
+      <!-- <button class="button-info" ng-click="chamadaCtrl.goToDetalhePage()">
   			<i class="ion-information"></i>
-  		</button>
+  	  </button> -->
 
 
     </ion-content>

@@ -10,10 +10,8 @@
 	    		<div class="row">
 	    			<div class="col col-100">
 			    		<ion-list>
-			    			<ion-item class="no-border border-radius-3 lista-turma"
-			    			ng-repeat="turma in turmas" ng-click="selecionarTurma(turma)">
-									<h4>{{turma.disciplina}}</h4>
-			    					<h4>Código da turma: {{turma._id}}</h4>
+			    			<ion-item class="no-border border-radius-3 lista-turma" ng-repeat="turma in turmas" ng-click="selecionarTurma(turma)">
+			    				<h4>Turma {{turma.nome}}</h4>
 			    			</ion-item>
 			    		</ion-list>
 		    		</div>
@@ -28,10 +26,9 @@
 	    		<div class="row">
 	    			<div class="col col-100">
 			    		<ion-list>
-			    			<ion-item class="no-border border-radius-3 lista-horarios"
-			    			ng-repeat="horario in horarios" ng-click="selecionarHorario(horario)">
-			    					<h4>Hora de início: {{horario.inicio}}</h4>
-			    					<h4>Hora de Fim: {{horario.fim}}</h4>
+			    			<ion-item class="no-border border-radius-3 lista-horarios" ng-repeat="horario in horarios" ng-click="selecionarHorario(horario)">
+		    					<h4>Hora de início: {{horario.inicio}}</h4>
+		    					<h4>Hora de Fim: {{horario.fim}}</h4>
 			    			</ion-item>
 			    		</ion-list>
 	    			</div>

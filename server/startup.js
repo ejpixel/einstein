@@ -1,4 +1,6 @@
+
 Meteor.startup(function () {
+
 	//insere usuário padrão
 	if(!Meteor.users.find().count()) {
 		var user = {
@@ -30,75 +32,5 @@ Meteor.startup(function () {
 			foto: 'http://cdn.productivemuslim.com/wp-content/uploads/2010/08/student-sleeping-on-books-ProductiveMuslim.jpg'
 		};
 		Alunos.insert(aluno3);
-	}
-	//insere professor dummy
-	if(!Professores.find().count()) {
-		var professor = {
-			cpf: 123123123,
-			nome: 'Fessor',
-			idade: 152
-		};
-		Professores.insert(professor);
-	}
-	//insere matricula dummy
-	if(!Matriculas.find().count()) {
-		var matricula1 = {
-			turmaId: 147258,
-			alunoId: 123123
-		};
-		var matricula2 = {
-			turmaId: 147258,
-			alunoId: 456789
-		};
-		var matricula3 = {
-			turmaId: 147258,
-			alunoId: 123456
-		};
-		var matricula4 = {
-			turmaId: 147259,
-			alunoId: 456789
-		};
-		var matricula5 = {
-			turmaId: 147259,
-			alunoId: 123456
-		};
-		Matriculas.insert(matricula1);
-		Matriculas.insert(matricula2);
-		Matriculas.insert(matricula3);
-	}
-	//insere chamada dummy
-	if(!Chamadas.find().count()) {
-		var chamada1 = {
-			chamadaId: 1,
-			turmaId: 147258,
-			alunoId: 123123,
-			data: new Date(),
-			presente: 0
-		};
-		var chamada2 = {
-			chamadaId: 2,
-			turmaId: 147258,
-			alunoId: 123456,
-			data: new Date(),
-			presente: 0
-		};
-		var chamada3 = {
-			chamadaId: 3,
-			turmaId: 147259,
-			alunoId: 123456,
-			data: new Date(),
-			presente: 0
-		};
-		var chamada4 = {
-			chamadaId: 4,
-			turmaId: 147259,
-			alunoId: 123456,
-			data: new Date(),
-			presente: 0
-		};
-		Chamadas.insert(chamada1);
-		Chamadas.insert(chamada2);
-		Chamadas.insert(chamada3);
-		Chamadas.insert(chamada4);
 	}
 });

@@ -65,21 +65,31 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 		.state('app.lista-chamada' , {
 			url: '/lista-chamada',
 			params: {
+				turmaId: '',
 				chamadaId: ''
 			},
 			views: {
 				'appContent': {
-              templateUrl: 'client/templates/lista-chamada.html',
-              controller: 'ListaChamadaController as listaChamadaCtrl'
-          }
-        }
-    })
+	              templateUrl: 'client/templates/lista-chamada.html',
+	              controller: 'ListaChamadaController as listaChamadaCtrl'
+          		}
+        	}
+    	})
 		.state('app.matricula' , {
 			url: '/matricula',
 			views: {
 				'appContent': {
 					templateUrl: 'client/templates/matricula.html',
 					controller: 'MatriculaController as matriculaCtrl'
+				}
+			}
+		})
+		.state('app.cadastroProfessor' , {
+			url: '/cadastro-professor',
+			views: {
+				'appContent': {
+					templateUrl: 'client/templates/cadastroProfessor.html',
+					controller: 'CadastroProfessorController as cadastroProfessorCtrl'
 				}
 			}
 		})
@@ -103,4 +113,5 @@ app.controller('AppController', function($scope, $ionicSideMenuDelegate) {
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
+	$scope.isMobile = Meteor.isCordova;
 })

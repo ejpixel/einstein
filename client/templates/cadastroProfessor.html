@@ -1,0 +1,36 @@
+<ion-view view-title="Cadastro de professor">
+    <ion-content class="_cadastro-professor">
+		<div class="row">
+			<div class="col col-100">
+				<form>
+					<div class="row">
+						<div class="col col-100">
+		    				<div class="input-text">
+		    					<h4>Login</h4>
+		    					<input class="matricula-input" type="text" placeholder="Insira o login" ng-model="professor.login"/>
+		    				</div>
+                            <div class="input-text">
+		    					<h4>Senha</h4>
+		    					<input class="matricula-input" type="password" placeholder="Insira a senha" ng-model="professor.senha"/>
+		    				</div>
+                            <h4>Disciplina</h4>
+                            <select ng-model="professor.disciplina">
+                                <option value="Matemática">Matemática</option>
+                                <option value="Física">Física</option>
+                                <option value="Química">Química</option>
+                                <option value="Biologia">Biologia</option>
+                                <option value="Geografia">Geografia</option>
+                                <option value="História">História</option>
+                                <option value="Idiomas">Idiomas</option>
+                                <option value="Língua Portuguesa">Língua Portuguesa</option>
+                            </select>
+		    			</div>
+		    		</div>
+					<div class="save-button">
+						<button class="button" ng-click="cadastroProfessorCtrl.salvar()">Salvar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+    </ion-content>
+</ion-view>
