@@ -1,18 +1,57 @@
 ._cadastroturma {
 
-    .item-input-wrapper {
-        width: 50%;
-        margin: auto;
-        margin-top: 5px;
+    .item .item-checkbox {
+        float: right;
+        border: none;
+        padding: 0;
+
+        & > .item-content:hover {
+            background-color: $primary-color-1;
+        }
     }
 
-    .item.item-input-inset > button {
-        margin-top: 10px;
+    .item-complex .item-content,
+    .item-radio .item-content {
+        background-color: $primary-color-4;
+        color: $primary-color-2;
+
+        &:hover {
+            background-color: $primary-color-1;
+            color: $primary-color-4;
+        }
+        & > span:nth-child(1) {
+            float: left;
+        }
+    }
+
+    .deletar-button {
+        background-color: $primary-color-4;
+        color: $primary-color-2;
+
+        &:hover {
+            background-color: $primary-color-2;
+            color: $primary-color-4;
+        }
     }
 
     input {
         margin: auto;
         width: 60%;
+    }
+
+    .upload-section {
+        background-color: $primary-color-3;
+        margin: 15px;
+        padding: 10px;
+        border-radius: 5px;
+
+        .button {
+            margin: 10px;
+
+            &:hover {
+                background-color: $primary-color-4;
+            }
+        }
     }
 
 }

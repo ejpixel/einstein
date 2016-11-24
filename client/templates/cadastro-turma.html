@@ -7,10 +7,11 @@
 
         <h4>Alunos Matriculados</h4>
         <ion-list>
-            <ion-item ng-repeat="aluno in alunos" class="item row">
-                <h2 class="col-40">{{aluno.nome}}</h2>
-                <h2 class="col-40">{{aluno.matricula}}</h2>
-                <ion-checkbox class="col-5" ng-model="aluno.selecionado"></ion-checkbox>
+            <ion-item ng-repeat="aluno in alunos" class="item">
+                <span>{{aluno.matricula}}</span>
+                <span>{{aluno.nome}}</span>
+                <ion-checkbox ng-model="aluno.selecionado"></ion-checkbox>
+                <ion-option-button class="deletar-button" ng-click="cadastroTurmaCtrl.deletar(aluno)">Deletar</ion-option-button>
             </ion-item>
         </ion-list>
         <hr/>
@@ -20,9 +21,16 @@
                 Cadastrar turma
             </button>
 
-            <button type="file" class="button" ng-click="cadastroTurmaCtrl.importarAlunos()">
-                Importar alunos
-            </button>
+            <div class="upload-section">
+                <h3>Importar lista de alunos</h3>
+                <div>
+                    <input id="file" type="file" accept=".csv" class="button"/>
+                </div>
+
+                <button class="button" ng-click="cadastroTurmaCtrl.importarAlunos()">
+                    Submeter arquivo
+                </button>
+            </div>
 
         </div>
     </ion-content>

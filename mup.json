@@ -1,9 +1,10 @@
 {
  "servers": [
     {
-      "host": "52.40.26.114",
-      "username": "ubuntu",
-      "pem": "/home/decio/Documents/amazon/lightchat.pem",
+      "host": "104.236.20.231",
+      "username": "root",
+      "password": "pixel2016@app",
+      /*"pem": "~/.ssh/id_rsa",*/
       "env": {}
     }
   ],
@@ -13,11 +14,11 @@
   "setupPhantom": true,
   "enableUploadProgressBar": true,
   "appName": "einstein",
-  "app": "/home/decio/Documents/einstein",
+  "app": "~/workspace/einstein",
 
   "env": {
     "PORT": 80,
-    "ROOT_URL": "http://einstein-floripa.zapto.org"
+    "ROOT_URL": "http://einstein-floripa.ddns.net"
   },
 
   "deployCheckWaitTime": 150

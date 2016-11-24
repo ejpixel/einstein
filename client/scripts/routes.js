@@ -26,15 +26,6 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 				}
 			}
 		})
-		.state('app.chamadaDois' , {
-			url: '/chamada/:turmaId/:chamadaId/:alunoId',
-			views: {
-				'appContent': {
-					templateUrl: 'client/templates/chamada.html',
-					controller: 'ChamadaController as chamadaCtrl'
-				}
-			}
-		})
 		.state('app.detalhe-chamada' , {
 			url: '/detalhe-chamada/:alunoId',
 			views: {
@@ -46,6 +37,7 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 		})
 		.state('app.aberturaChamada' , {
 			url: '/aberturaChamada',
+			cache: false,
 			views: {
 				'appContent': {
 					templateUrl: 'client/templates/aberturaChamada.html',
