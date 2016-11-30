@@ -4,7 +4,7 @@ angular.module("Estrutura-Inicial")
 function ImportacaoAlunosController($state, $scope) {
 
     var vm = this;
-    
+
     vm.importarAlunos = function() {
         var fileElem = document.getElementById("file").files[0];
 
@@ -39,6 +39,12 @@ function ImportacaoAlunosController($state, $scope) {
                 matricula: matricula,
                 nome: nome
             });
+
+            $ionicPopup.alert({
+                title: 'Sucesso!',
+                template: 'Planilha importada.'
+            });
+            $location.path('/einstein/aberturaChamada');
         });
     };
 };
