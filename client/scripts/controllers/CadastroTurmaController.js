@@ -77,6 +77,12 @@ function CadastroTurmaController($location, $scope, $ionicScrollDelegate, $ionic
                  matricula: matricula,
                  nome: nome
              });
+
+             $ionicPopup.alert({
+               title: 'Sucesso!',
+               template: 'Planilha importada.'
+           });
+           $location.path('/einstein/aberturaChamada');
          });
      };
 
