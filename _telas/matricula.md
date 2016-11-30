@@ -4,20 +4,24 @@ title: Tela de matrícula
 permalink: /matricula/
 ---
 
-Nesta tela o professor cadastrará os dados pessois do aluno.
+Nesta tela o professor cadastrará o aluno no sistema.
 
 Possuirá os campos:
 
 * Nome
-* Idade
-* Matrícula, que será o CPF do aluno
+* Matrícula, que será o código identificador do aluno
 
 Possuirá os botões:
 
-* Upload, para o professor cadastrar uma foto do aluno, opcionalmente
+* Salvar
 
 Esta tela estará disponível apenas na versão **web**.
 
 **Observação**
 
 Essa tela estará acessível a partir do __sidemenu__.
+
+**Screenshots**
+
+![]({{ site.baseurl }}/assets/matricula.png)
+*Tela de matrícula*

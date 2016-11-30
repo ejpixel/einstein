@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Tela de cadastro de turma</title>
+  <title>Tela de importação de turma</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/einstein/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/einstein/cadastro-turma/">
+  <link rel="canonical" href="http://localhost:4000/einstein/importacao-turma/">
   <link rel="alternate" type="application/rss+xml" title="Projeto Einstein" href="http://localhost:4000/einstein/feed.xml">
 </head>
 
@@ -36,41 +36,26 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <p>Nesta tela o professor irá efetuar a matrícula dos alunos em uma turma.</p>
-
-<p>Mostrará as informações:</p>
-
-<ul>
-  <li>Alunos já matriculados (estando ou não em alguma turma). Os alunos matriculados são os alunos que já foram cadastrados no sistema em algum momento, seja via importação de planilha ou manualmente.</li>
-</ul>
+        <p>Nesta tela o administrador importará a planilha de alunos. Esta planilha deverá estar em formato <strong>.csv</strong>,
+formato mais simples de planilha eletrônica, sem qualquer tipo de formatação. Vale ressaltar que todo software de edição de planilha eletrônica como Microsoft Excel e Google Sheets possuem opção de exportar para .csv. O formato da planilha deverá ser tal como <a href="/einstein/assets/lista-alunos.csv">este exemplo</a>.</p>
 
 <p>Possuirá os botões:</p>
 
 <ul>
-  <li>Cadastrar turma, se número de matriculados for maior ou igual a <strong>25</strong>.</li>
-  <li>Deletar</li>
+  <li>Choose file, para o usuário selecionar o arquivo no disco.</li>
+  <li>Submeter arquivo, para fazer upload do arquivo e inserir os alunos na base de dados.</li>
 </ul>
 
 <p>Esta tela estará disponível apenas na versão <strong>web</strong>.</p>
 
-<p><strong>Comportamento</strong></p>
+<p><strong>Observação</strong></p>
 
-<p>Deverá apresentar a lista dos alunos já matriculados.</p>
-
-<p>Deverá exibir também um botão de remoção em cada item da lista, que ao ser clicado abrirá um modal de confirmação de exclusão.</p>
-
-<p>Ao clicar em cadastrar turma, ela estará disponível na listagem das turmas, e o sistema navegará para a <a href="/einstein/abertura-chamada" title="Tela de Abertura de chamada">Tela de Abertura de chamada</a>.</p>
+<p>Essa tela estará acessível a partir do <strong>sidemenu</strong>.</p>
 
 <p><strong>Screenshots</strong></p>
 
-<p><img src="/einstein/assets/cadastrar-turma-1.png" alt="" />
- <em>Lista de alunos com campo nome no topo</em></p>
-
-<p><img src="/einstein/assets/cadastrar-turma-2.png" alt="" />
- <em>Lista de alunos com detalhe do botão de deleção</em></p>
-
-<p><img src="/einstein/assets/cadastrar-turma-3.png" alt="" />
- <em>Lista de alunos com botão de cadastrar a turma no rodapé</em></p>
+<p><img src="/einstein/assets/importar.png" alt="" />
+<em>Screenshot da tela de importação</em></p>
 
       </div>
     </div>
