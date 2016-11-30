@@ -1,8 +1,8 @@
 <ion-view>
     <ion-nav-buttons side="right">
-        <button class="button" ng-if="!isMobile" ng-click="chamadaCtrl.escolherData()">
+        <!-- <button class="button" ng-if="!isMobile" ng-click="chamadaCtrl.escolherData()">
             Chamada com data retroativa
-        </button>
+        </button> -->
         <button class="button" ng-click="chamadaCtrl.goToListaPage()">
             Lista
         </button>
@@ -10,9 +10,9 @@
     <ion-content class="_chamada">
 
 
-      <div class="fotos-aluno">
-  			<img src="{{aluno.foto}}" class="img-responsive">
-  		</div>
+      <div >
+        <i class = "icon ion-person"></i>
+  	  </div>
       <ion-list>
         <ion-item><h2>{{aluno.nome}}</h2></ion-item>
         <ion-item><h2>{{aluno.matricula}}</h2></ion-item>

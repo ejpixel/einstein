@@ -54,6 +54,15 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 				}
 			}
 		})
+		.state('app.importacao-alunos' , {
+			url: '/importacao-alunos',
+			views: {
+				'appContent': {
+					templateUrl: 'client/templates/importacao-alunos.html',
+					controller: 'ImportacaoAlunosController as importacaoAlunosCtrl'
+				}
+			}
+		})
 		.state('app.lista-chamada' , {
 			url: '/lista-chamada',
 			params: {
